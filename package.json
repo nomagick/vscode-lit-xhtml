@@ -1,10 +1,10 @@
 {
-    "name": "lit-html",
+    "name": "lit-xhtml",
     "private": true,
-    "displayName": "lit-html",
+    "displayName": "lit-xhtml",
     "description": "Syntax highlighting and IntelliSense for html inside of JavaScript and TypeScript tagged template strings",
-    "version": "1.11.1",
-    "publisher": "bierner",
+    "version": "1.11.2",
+    "publisher": "nomagick",
     "icon": "docs/logo.png",
     "license": "MIT",
     "galleryBanner": {
@@ -22,9 +22,11 @@
     ],
     "keywords": [
         "lit-html",
+        "lit-xhtml",
         "javascript",
         "typescript",
         "html",
+        "xhtml",
         "template"
     ],
     "engines": {
@@ -52,6 +54,7 @@
                         },
                         "default": [
                             "html",
+                            "xhtml",
                             "raw"
                         ]
                     },
@@ -77,7 +80,9 @@
                 "path": "./syntaxes/lit-html.json",
                 "embeddedLanguages": {
                     "meta.embedded.block.html": "html",
+                    "meta.embedded.block.xhtml": "xml",
                     "meta.embedded.block.css": "css",
+                    "meta.embedded.block.scss": "scss",
                     "source.css": "css"
                 }
             },
@@ -124,6 +129,21 @@
                 "path": "./syntaxes/lit-html-svg.json",
                 "embeddedLanguages": {
                     "meta.embedded.block.svg": "xml"
+                }
+            },
+            {
+                "injectTo": [
+                    "source.js",
+                    "source.js.jsx",
+                    "source.jsx",
+                    "source.ts",
+                    "source.tsx",
+                    "text.html.basic"
+                ],
+                "scopeName": "inline.lit-html-xhtml",
+                "path": "./syntaxes/lit-html-xhtml.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.xhtml": "xml"
                 }
             }
         ],
